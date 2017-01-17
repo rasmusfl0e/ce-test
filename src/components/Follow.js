@@ -8,9 +8,6 @@ export default class Follow extends HTMLElement {
 	constructor() {
 		super();
 
-		this.topic = this.getAttribute(TOPIC);
-		this.subscribed = this.getAttribute(SUBSCRIBED);
-
 		this.toggle = this.toggle.bind(this);
 
 		this.addEventListener("click", this.toggle);
@@ -28,7 +25,12 @@ export default class Follow extends HTMLElement {
 	}
 
 	connectedCallback() {
+
+		this.topic = this.getAttribute(TOPIC);
+		this.subscribed = this.getAttribute(SUBSCRIBED);
+
 		this.innerHTML = this.topic;
+
 	}
 
 }
