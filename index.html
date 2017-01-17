@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<title>Custom Element test</title>
+	</head>
+	<body>
+		<drc-follow data-topic="Trump"></drc-follow>
+		<button id="newButton">Ny knap</button>
+		<script>
+			var topics = ["Indland", "Udland", "Politik", "Kultur", "Sport", "Penge", "Viden"];
+			var index = 0;
+			function createButton () {
+				var button = document.createElement("drc-follow");
+				button.setAttribute("data-topic", topics[index]);
+				newButton.parentNode.insertBefore(button, newButton);
+				index++;
+				index %= topics.length;
+			}
+			newButton.onclick = createButton;
+		</script>
+		<script src="./lib/index.js"></script>
+	</body>
+</html>
