@@ -1,4 +1,4 @@
-import "./Follow.css";
+//import "./Follow.css";
 
 const SUBSCRIBED = "data-subscribed";
 const TOPIC = "data-topic";

@@ -2,10 +2,10 @@ var path = require("path");
 
 module.exports = {
 	entry: {
-		"index": "./src/index.js"
+		"index": "./src/components/Follow.js"
 	},
 	output: {
-		_libraryTarget: "commonjs",
+		libraryTarget: "commonjs",
 		path: path.join(__dirname, "lib/"),
 		filename: "[name].js"
 	},
